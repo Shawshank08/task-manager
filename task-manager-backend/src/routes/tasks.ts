@@ -71,7 +71,7 @@ router.post("/", requireAuth, async (req: AuthRequest, res) => {
 // DELETE TASK
 router.delete("/:id", requireAuth, async (req: AuthRequest, res) => {
   const userId = req.user!.id
-  const { id } = req.params
+  const id = req.params.id as string
 
   const task = await prisma.task.findUnique({
     where: { id }
@@ -90,7 +90,7 @@ router.delete("/:id", requireAuth, async (req: AuthRequest, res) => {
 // UPDATE TASK
 router.patch("/:id", requireAuth, async (req: AuthRequest, res) => {
   const userId = req.user!.id
-  const { id } = req.params
+  const id = req.params.id as string
   const { title, description, status } = req.body
 
   const task = await prisma.task.findUnique({
@@ -115,7 +115,7 @@ router.patch("/:id", requireAuth, async (req: AuthRequest, res) => {
 // GET SINGLE TASK
 router.get("/:id", requireAuth, async (req: AuthRequest, res) => {
   const userId = req.user!.id
-  const { id } = req.params
+  const id = req.params.id as string
 
   const task = await prisma.task.findUnique({
     where: { id }
@@ -130,7 +130,7 @@ router.get("/:id", requireAuth, async (req: AuthRequest, res) => {
 // TOGGLE TASK STATUS
 router.post("/:id/toggle", requireAuth, async (req: AuthRequest, res) => {
   const userId = req.user!.id
-  const { id } = req.params
+  const id = req.params.id as string
 
   const task = await prisma.task.findUnique({
     where: { id }

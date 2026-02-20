@@ -36,7 +36,7 @@ router.post("/register", async (req, res) => {
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: false,
-    sameSite: "lax"
+    sameSite: "none"
   })
 
   return res.json({ accessToken })
@@ -66,7 +66,7 @@ router.post("/login", async (req, res) => {
   res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     secure: false,
-    sameSite: "lax"
+    sameSite: "none"
   })
 
   return res.json({ accessToken })
