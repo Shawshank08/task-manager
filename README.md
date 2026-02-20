@@ -52,3 +52,8 @@ Make sure to configure `.env` variables:
 - DATABASE_URL
 - ACCESS_SECRET
 - REFRESH_SECRET
+
+## Live Demo
+
+Frontend: https://task-manager-theta-tan.vercel.app  
+Backend API: https://task-manager-qdyz.onrender.com
