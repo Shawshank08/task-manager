@@ -91,7 +91,7 @@ export default function Home() {
       <div className="min-h-screen bg-zinc-900 text-zinc-100 flex items-center justify-center px-4">
         <div className="bg-zinc-800 p-8 rounded-xl shadow-lg w-full max-w-sm space-y-5">
 
-          <h1 className="text-2xl font-semibold text-center">
+          <h1 className="text-2xl font-semibold text-center cursor cursor-pointer">
             Sign In
           </h1>
 
