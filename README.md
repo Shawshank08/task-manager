@@ -36,13 +36,17 @@ On page reload, the frontend automatically restores the session using the refres
 ## How to Run
 
 ### Backend
+```bash
 npm install
 npx prisma db push
 npm run dev
+```
 
 ### Frontend
+```bash
 npm install
 npm run dev
+```
 
 Make sure to configure `.env` variables:
 - DATABASE_URL
